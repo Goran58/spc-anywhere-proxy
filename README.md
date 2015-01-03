@@ -7,17 +7,19 @@ SPC Anywhere is available in AppStore and Google Play.
 <b>NOTE!</b> To be able to use this module you also need to have SPC Web Gateway from [Lundix IT](http://www.lundix.se/smarta-losningar). SPC Web Gateway is providing a generic open REST and Websocket interface to Siemens SPC intrusion system.
 
 ## Limitations
-  - Full language support for English and Swedish. Limited support for German, French, Italian, Spanish, Dutch and Danish.
+Virtually all features in SPC Anywhere are supported but there are some limitations:
+  - Full language support for English and Swedish but limited support for German, French, Italian, Spanish, Dutch and Danish.
   - Full support for System Log. No support for Access Log and WPA Log.
-  - No support for Door Status and commands.
-  - Support for showing live videos. But you have to define a verification zone for each camera. The verification zone IDs must be 1 to 4.  
-  - Users and passwords are configured in the proxy, not in the SPC panel. 
+  - No support for Door status and Door commands.
+  - Showing live videos is supported, but you have to define a verification zone for each camera. The verification zone IDs must be 1 to 4 (shows up as cam 1 to 4).
+  - Users and passwords are configured in the proxy settings, not in the SPC panel. 
+  - Only SSL communication between the App and SPC Anywhere Proxy and between SPC Anywhere Proxy and SPC Web Gateway is supported.
   
 ## Installation
 ### Install NodeJS (example valid only for Raspberry Pi)
-        sudo apt-get update
-        sudo wget http://node-arm.herokuapp.com/node_latest_armhf.deb
-        sudo dpkg -i node_latest_armhf.deb
+	sudo apt-get update
+	sudo wget http://node-arm.herokuapp.com/node_latest_armhf.deb
+	sudo dpkg -i node_latest_armhf.deb
         
 ### Install SPC Anywhere Proxy 
 	git clone https://github.com/Goran58/spc-anywhere-proxy
@@ -29,6 +31,7 @@ SPC Anywhere is available in AppStore and Google Play.
 - Modify the settings in config.json according to your environment and SPC Web Gateway settings
 
 ## App Settings
- 
+Configure the Site settings in the App according following exampel. Note that you have to add the portnumber to the IP address.
+![SPC Anywhere Site Settings](./images/spc-anywhere-site-settings.png?raw=true) 
 ## Start
 	./spc-anywhere-proxy.js

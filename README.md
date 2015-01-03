@@ -14,12 +14,12 @@ SPC Anywhere is available in AppStore and Google Play.
   - Users and passwords are configured in the proxy, not in the SPC panel. 
   
 ## Installation
-     ### Install NodeJS (example valid only for Raspberry Pi)
+### Install NodeJS (example valid only for Raspberry Pi)
         sudo apt-get update
         sudo wget http://node-arm.herokuapp.com/node_latest_armhf.deb
         sudo dpkg -i node_latest_armhf.deb
         
-     ### Install SPC Anywhere Proxy 
+### Install SPC Anywhere Proxy 
 	git clone https://github.com/Goran58/spc-anywhere-proxy
 	cd spc-anywhere-proxy
 	npm install

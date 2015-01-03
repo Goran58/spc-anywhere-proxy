@@ -33,7 +33,7 @@ Virtually all features in SPC Anywhere are supported but there are some limitati
 ## App Settings
 Configure the Site settings in the App according following exampel. Note that you have to add the portnumber to the IP address.
 
-![SPC Anywhere Site Settings](./images/spc-anywhere-site-settings.png =100x?raw=true) 
+![SPC Anywhere Site Settings](./images/spc-anywhere-site-settings.png =100x200) 
 
 ## Start
 	./spc-anywhere-proxy.js

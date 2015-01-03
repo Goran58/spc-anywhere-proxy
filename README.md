@@ -13,7 +13,7 @@ Virtually all features in SPC Anywhere are supported but there are some limitati
   - No support for Door status and Door commands.
   - Showing live videos is supported, but you have to define a verification zone for each camera. The verification zone IDs must be 1 to 4 (shows up as cam 1 to 4).
   - User credentials are configured in the proxy settings, not in the SPC panel. Default users are test1 (password test1_pwd) and test2 (password test2_pwd).
-  - Only SSL communication between the App and SPC Anywhere Proxy and between SPC Anywhere Proxy and SPC Web Gateway is supported.
+  - You need to allow SSL communication between the App and SPC Anywhere Proxy and between SPC Anywhere Proxy and SPC Web Gateway.
   
 ## Installation
 ### Install NodeJS (example valid only for Raspberry Pi)

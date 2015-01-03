@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>SPC Anywhere</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+    <table>
+      <td>
+        <form method='post' action='secure.htm?zone=<%= zone_data[0].id %>'>
+          <table class='section_text'>
+            <% for (var i=0; i < zone_data.length; i++) { %>
+              <tr height=20>
+                <td><%= zone_data[i].id + " " + zone_data[i].zone_name %></td>
+                <td></td>
+                <td><%= zone_data[i].type %></td>
+                <td><%= zone_data[i].input %></td>
+                <td><%= zone_data[i].status %></td>
+                <td><input type='submit' value='Log' name='<%= "log" + zone_data[i].id %>'></td>
+                <td><input type='submit' value='<%= zone_data[i].submit_value %>' name='<%= zone_data[i].submit_name + zone_data[i].id %>'></td>
+              </tr>
+            <% } %>
+          </table>
+        </form>
+      </td>
+    </table>
+  </body>
+</html>

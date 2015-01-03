@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SPC Anywhere Proxyi - Lundix IT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <form method="post" action="secure.htm?session=<%= session_id %>&page=status_summary">
+            <table>
+              <tr valign="top"></tr>
+              <tr valign="top">
+                <td>
+                  <table>
+                    <tr>
+                      <td class="section_border">Status</td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table class="section_text">
+                          <% for (var i = 0; i < area_data.length; i++) { %>
+                            <tr>
+                              <td><img src="icon_unset.gif"></td>
+                              <td><%= area_data[i].mode %></td>
+                              <td>
+                                <input type="submit" value="<%= area_data[i].submit0_value %>" name="<%= area_data[i].submit0_name + i + 1 %>" <%= area_data[i].submit0_disabled %>="disabled"> 
+                                <input type="submit" value="<%= area_data[i].submit1_value %>" name="<%= area_data[i].submit1_name + i + 1 %>" <%= area_data[i].submit1_disabled %>="disabled">
+                                <input type="submit" value="<%= area_data[i].submit2_value %>" name="<%= area_data[i].submit2_name + i + 1 %>" <%= area_data[i].submit2_disabled %>="disabled">
+                              </td>
+                            </tr>
+                          <% } %>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr valign="top">
+                <td>
+                  <table>
+                    <tr>
+                      <td>
+                        <table class="section_text">
+                          <% for (var i = 0; i < zone_data.length; i++) { %>
+                            <% if (zone_data[i].status == 5) { %>
+                              <tr>
+                                <td>
+                                  <img src="icon_fail.gif">
+                                </td>
+                                <td>
+                                  <%= "Zone " + zone_data[i].id + " " + zone_data[i].zone_name %>
+                                  <B>
+                                  Alarm
+                                  </B>
+                                </td>
+                                <td>
+                                  <input type="submit" value="Restore" name="restore<%= zone_data[i].id %>">
+                                </td>
+                              </tr>
+                            <% } %>
+                          <% } %>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

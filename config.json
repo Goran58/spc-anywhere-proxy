@@ -1,0 +1,16 @@
+{
+   "proxy_host":"localhost",
+   "proxy_port":"8087",
+   "spc_web_gw_host":<YOUR_SPC_WEB_GATEWAY_IP>,
+   "spc_web_gw_port":"8088",
+   "spc_web_gw_get_user":"get_user",
+   "spc_web_gw_get_pwd":"get_pwd",
+   "spc_web_gw_put_user":"put_user",
+   "spc_web_gw_put_pwd":"put_pwd",
+   "users": [
+       {"user_id":"test1", 
+        "user_pwd":"test1_pwd"},
+       {"user_id":"test2", 
+        "user_pwd":"test2_pwd"}
+   ]
+}

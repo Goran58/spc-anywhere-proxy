@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>SPC Anywhere</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+    <table>
+      <td>
+        <table class="section_text">
+          <% for (var i = 1; i <= num_cameras; i++) { %>
+            <tr>
+              <td class="subhead"><%= "Cam" + i %></td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="secure.htm?page=video_live&camera=<%= i %>" width="320" height="240" id="cam<%= i %>">
+              </td>
+            </tr>
+          <% } %>
+        </table>
+      </td>
+    </table>
+  </body>
+</html>

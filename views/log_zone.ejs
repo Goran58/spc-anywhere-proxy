@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>SPC Anywhere</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+    <table>
+      <td>
+        <form method='post' action='secure.htm?zone=1'>
+          <table class='section_text' cellspacing=2>
+            <tr>
+              <td class="subhead" align="center"><%= time_label %></td>
+              <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+              <td class="subhead" align="left"><%= input_label %></td>
+            </tr>
+            <% for(var i = log_data.length - 1; i >= 0; i--) { %>
+              <tr>
+                <td align='center'><%= log_data[i].time %></td>
+                <td></td>
+                <td align='left'><font color=<%= log_data[i].color %>><%= log_data[i].input %></font></td>
+              </tr>
+            <% } %>
+          </table>
+        </form>
+      </td>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <title>SPC Anywhere</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body>
+    <table>
+      <td>
+        <form nethod='post' action='secure.htm?page=outputs'>
+          <table class='section_text'>
+            <tr>
+            </tr>
+            <% for (var i=0; i < output_data.length; i++) { %>
+              <tr>
+                <td><img src='<%= "icon_output" + output_data[i].state + ".gif"%>'></td>
+                <td><%= output_data[i].name %></td>
+                <td><input type='submit' value=' On ' name='<%= "on0" + output_data[i].id %>'>&nbsp;<input type='submit' value=' Off ' name='<%= "off0" + output_data[i].id %>'></td>
+              </tr>
+            <% } %>
+          </table>
+        </form>
+      </td>
+    </table>
+  </body>
+</html>
